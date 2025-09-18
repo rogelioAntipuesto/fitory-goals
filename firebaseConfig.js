@@ -1,24 +1,17 @@
-import { initializeApp } from 'firebase/app';
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore"; // 👈 use full Firestore
 
-// Optionally import the services that you want to use
-// import {...} from 'firebase/auth';
-// import {...} from 'firebase/database';
-// import {...} from 'firebase/firestore';
-// import {...} from 'firebase/functions';
-// import {...} from 'firebase/storage';
-
-// Initialize Firebase
 const firebaseConfig = {
-  apiKey: 'api-key',
-  authDomain: 'project-id.firebaseapp.com',
-  databaseURL: 'https://project-id.firebaseio.com',
-  projectId: 'project-id',
-  storageBucket: 'project-id.appspot.com',
-  messagingSenderId: 'sender-id',
-  appId: 'app-id',
-  measurementId: 'G-measurement-id',
+  apiKey: "AIzaSyBZSW3sfswmYjmA5JDb14Nz4fl_1Cjdnk0",
+  authDomain: "mobile-app---fitory.firebaseapp.com",
+  projectId: "mobile-app---fitory",
+  storageBucket: "mobile-app---fitory.firebasestorage.app",
+  messagingSenderId: "633690898945",
+  appId: "1:633690898945:web:bde9210cb77fc044eb7600"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// For more information on how to access Firebase in your project,
-// see the Firebase documentation: https://firebase.google.com/docs/web/setup#access-firebase
+
+// Export Firestore
+export const db = getFirestore(app);
